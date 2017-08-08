@@ -1,4 +1,5 @@
 # OS probe
+# TODO: refactor to external script
 unameOut="$(uname -s)"
 case "${unameOut}" in
     Linux*)     OS=Linux;;
@@ -12,8 +13,11 @@ esac
 # user-specific aliases
 
 if [[ ${OS} == "Mac" ]]; then
-  export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
-  alias ll='ls -l -G'
+  if [[ -f .bash_profile_osx ]]; then
+    source .bash_profile_osx
+  else
+    echo "==> error loading .bash_profile_osx"
+  fi
 fi
 
 if [[ ${OS} == "Linux" ]]; then
