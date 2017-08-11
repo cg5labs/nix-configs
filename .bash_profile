@@ -10,8 +10,17 @@ case "${unameOut}" in
 esac
 
 
-# user-specific aliases
+# general config
 
+# git-aware prompt
+# https://github.com/jimeh/git-aware-prompt
+
+if [[ -d ${HOME}/.bash ]]; then
+  export GITAWAREPROMPT=~/.bash/git-aware-prompt
+  source "${GITAWAREPROMPT}/main.sh"
+fi
+
+# OS-specific configs
 if [[ ${OS} == "Mac" ]]; then
   if [[ -f .bash_profile_osx ]]; then
     source .bash_profile_osx

@@ -8,6 +8,16 @@ export PATH=/usr/local/bin:$PATH
 # Load .bashrc if it exists
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
+# git-aware prompt
+export PS1="\u@\h \W \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# sudo-prompt in red
+#export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
+export SUDO_PS1="\[$txtred\]\u@\h\[$txtrst\] \w\$ "
+
+# setup autoenv for python
+source $(brew --prefix autoenv)/activate.sh
+
 # load bash completion if installed
 if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
   source $(brew --prefix)/etc/bash_completion
