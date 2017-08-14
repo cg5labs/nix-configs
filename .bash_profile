@@ -22,16 +22,29 @@ fi
 
 # OS-specific configs
 if [[ ${OS} == "Mac" ]]; then
-  if [[ -f .bash_profile_osx ]]; then
-    source .bash_profile_osx
+  if [[ -f ${HOME}/nix-configs/.bash_profile_osx ]]; then
+    source ${HOME}/nix-configs/.bash_profile_osx
   else
-    echo "==> error loading .bash_profile_osx"
+    echo "==> error loading ${HOME}/nix-configs/.bash_profile_osx"
   fi
 fi
 
 if [[ ${OS} == "Linux" ]]; then
+
+  # Linux shared configs
+
   # change dir color for ls
   LS_COLORS=$LS_COLORS:'di=1;32:' ; export LS_COLORS
   alias ll='ls -l --color=auto'
+
+  # OpenSUSE configs
+  if [[ -r /etc/SuSE-release || $(grep suse /etc/os-release) == 0 ]]; then
+    if [[ -f ${HOME}/nix-configs/.bash_profile_suse ]]; then
+      source ${HOME}/nix-configs/.bash_profile_suse
+    else
+      echo "==> error loading ${HOME}/nix-configs/.bash_profile_suse"
+    fi
+  fi
+
 fi
 
