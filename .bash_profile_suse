@@ -1,3 +1,8 @@
 
 # \[$(ppwd)\]\u@\h:\w>
 export PS1="\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+
+# setup autoenv for python
+if [[ -d ${HOME}/.autoenv ]]; then 
+  source ${HOME}/.autoenv/activate.sh
+fi
