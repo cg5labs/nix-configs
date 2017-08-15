@@ -1,5 +1,8 @@
 # nix-configs
-Default configuration files for Unix systems
+Default configuration files for Unix systems.
+
+* Dotfiles from nix-configs  will only be symlinked if no corresponding dotfile already exists in $HOME
+* Tool-specific dotfiles will only be symlinked if the tool is installed on the system
 
 ```python
 .tmux.conf     #
