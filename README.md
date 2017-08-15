@@ -9,5 +9,6 @@ Default configuration files for Unix systems
                #  * Mac OSX
                #  * Linux (Suse)
 
-link.py        #  Automatic check-script to create symlinks if missing: $HOME/.dotfile -> $HOME/nix-configs/.dotfile
+link.py        #  Automatic check-script to create symlinks if missing: 
+               #  $HOME/.dotfile -> $HOME/nix-configs/.dotfile
 ```
