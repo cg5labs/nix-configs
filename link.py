@@ -6,11 +6,11 @@ import os
 
 # add dotfiles in array to be created
 cfg_files  = [
-  '.vimrc',        # vim
-  '.tmux.conf',    # tmux
-  '.bash_profile', # bash
-  '.testcfg'       # dummy link
-  ]
+    '.vimrc',        # vim
+    '.tmux.conf',    # tmux
+    '.bash_profile', # bash
+    '.testcfg'       # dummy link
+    ]
 
 # main
 
