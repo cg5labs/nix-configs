@@ -35,7 +35,7 @@ if [[ ${OS} == "Linux" ]]; then
 
   # change dir color for ls
   LS_COLORS=$LS_COLORS:'di=1;32:' ; export LS_COLORS
-  alias ll='ls -l --color=auto'
+  alias ll='ls -la --color=auto'
 
   # OpenSUSE configs
   if [[ -r /etc/SuSE-release || $(grep suse /etc/os-release) == 0 ]]; then

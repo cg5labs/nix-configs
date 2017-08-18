@@ -27,4 +27,4 @@ fi
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 
 # aliases
-alias ll='ls -l -G'
+alias ll='ls -la -G'
