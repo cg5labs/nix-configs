@@ -12,7 +12,9 @@ case "${unameOut}" in
 esac
 
 
-# general config
+#-------------------------------------------------------------
+# General configs
+#-------------------------------------------------------------
 
 # git-aware prompt
 # https://github.com/jimeh/git-aware-prompt
@@ -22,7 +24,16 @@ if [[ -d ${HOME}/.bash ]]; then
   source "${GITAWAREPROMPT}/main.sh"
 fi
 
+# add nix-scripts to $PATH
+if [[ -d ${HOME}/nix-scripts ]]; then
+    export PATH=${PATH}:${HOME}/nix-scripts
+fi
+
+
+#-------------------------------------------------------------
 # OS-specific configs
+#-------------------------------------------------------------
+
 if [[ ${OS} == "Mac" ]]; then
   if [[ -f ${HOME}/nix-configs/.bash_profile_osx ]]; then
     source ${HOME}/nix-configs/.bash_profile_osx
