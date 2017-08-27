@@ -19,6 +19,6 @@ link.py        #  Automatic check-script to create symlinks if missing:
 ```
 
 Adding new Dotfiles:
-* add file: ./nix-configs/<new-dotfile>
+* add file: ./nix-configs/\<new-dotfile\>
 * edit ./nix-configs/link.py (add dotfile to dotfiles array at beginning)
 * run ./nix-configs/link.py
