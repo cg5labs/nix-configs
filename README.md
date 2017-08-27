@@ -15,4 +15,10 @@ Default configuration files for Unix systems.
 
 link.py        #  Automatic check-script to create symlinks if missing: 
                #  $HOME/.dotfile -> $HOME/nix-configs/.dotfile
+
 ```
+
+Adding new Dotfiles:
+# add file: ./nix-configs/<new-dotfile>
+# edit ./nix-configs/link.py (add dotfile to dotfiles array at beginning)
+# run ./nix-configs/link.py

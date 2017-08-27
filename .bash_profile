@@ -1,3 +1,5 @@
+# More examples, doc. see: http://tldp.org/LDP/abs/html/sample-bashrc.html
+
 # OS probe
 # TODO: refactor to external script
 unameOut="$(uname -s)"
