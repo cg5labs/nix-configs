@@ -9,6 +9,7 @@ cfg_files  = [
     '.vimrc',        # vim
     '.tmux.conf',    # tmux
     '.bash_profile', # bash
+    '.xmodmap'       # xmodmap
     '.testcfg'       # dummy link
     ]
 
