@@ -23,6 +23,13 @@ if [[ -f $(brew --prefix)/etc/bash_completion ]]; then
   source $(brew --prefix)/etc/bash_completion
 fi
 
+# use brew-installed sqlite 3.20 if it exists
+# This formula is keg-only, which means it was not symlinked into /usr/local,
+# because macOS provides an older sqlite3.
+if [[ -d /usr/local/opt/sqlite/bin ]]; then
+    export PATH="/usr/local/opt/sqlite/bin:${PATH}"
+fi
+
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 
