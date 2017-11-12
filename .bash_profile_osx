@@ -32,6 +32,7 @@ fi
 
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
+export HOMEBREW_GITHUB_API_TOKEN="eb8129bac3bf7faa986c6a9841fbe7c93cf03ccd"
 
 # aliases
 alias ll='ls -la -G'
