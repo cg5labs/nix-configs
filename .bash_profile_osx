@@ -32,8 +32,7 @@ fi
 
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
-#TODO: source from local
-#export HOMEBREW_GITHUB_API_TOKEN="eb8129bac3bf7faa986c6a9841fbe7c93cf03ccd"
+export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
 
 # aliases
 alias ll='ls -la -G'
