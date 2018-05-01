@@ -30,6 +30,12 @@ if [[ -d /usr/local/opt/sqlite/bin ]]; then
     export PATH="/usr/local/opt/sqlite/bin:${PATH}"
 fi
 
+# jenv manages $JAVA_HOME
+if [[ -f /usr/local/bin/jenv ]]; then
+    export PATH="$HOME/.jenv/bin:$PATH"
+    eval "$(jenv init -)"
+fi
+
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
