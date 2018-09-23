@@ -1,10 +1,21 @@
 # $HOME/.bash_profile for MacOSX
 # sourced from global $HOME/.bash_profile
 
+pathmunge () {
+if ! echo $PATH | /usr/bin/egrep -q "(^|:)$1($|:)" ; then
+   if [ "$2" = "after" ] ; then
+      PATH=$PATH:$1
+   else
+      PATH=$1:$PATH
+   fi
+fi
+}
+
 # $PATH setup
 
 # Ensure user-installed binaries take precedence
 export PATH=/usr/local/bin:$PATH
+
 # Load .bashrc if it exists
 [[ -f ~/.bashrc ]] && source ~/.bashrc
 
@@ -41,7 +52,8 @@ if which rbenv > /dev/null; then
   eval "$(rbenv init -)"; 
   # fix for ChefDK to work
   if [[ -d /opt/chefdk/bin ]]; then
-    export PATH="/opt/chefdk/bin:$PATH"
+    export PATH="/usr/local/bin:/opt/chefdk/bin:$PATH"
+    pathmunge /usr/local/bin
   fi
 fi
 
