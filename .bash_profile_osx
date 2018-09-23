@@ -39,6 +39,10 @@ fi
 # Add rbenv to bash so that it loads every time you open a terminal
 if which rbenv > /dev/null; then 
   eval "$(rbenv init -)"; 
+  # fix for ChefDK to work
+  if [[ -d /opt/chefdk/bin ]]; then
+    export PATH="/opt/chefdk/bin:$PATH"
+  fi
 fi
 
 # shell environment
