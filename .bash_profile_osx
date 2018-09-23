@@ -36,6 +36,11 @@ if [[ -f /usr/local/bin/jenv ]]; then
     eval "$(jenv init -)"
 fi
 
+# Add rbenv to bash so that it loads every time you open a terminal
+if which rbenv > /dev/null; then 
+  eval "$(rbenv init -)"; 
+fi'
+
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
