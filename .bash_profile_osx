@@ -14,7 +14,7 @@ fi
 # $PATH setup
 
 # Ensure user-installed binaries take precedence
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
 # Load .bashrc if it exists
 [[ -f ~/.bashrc ]] && source ~/.bashrc
@@ -59,7 +59,7 @@ fi
 
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
-export VAGRANT_DEFAULT_PROVIDER="vmware_fusion"
+export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 
 # aliases
 alias ll='ls -la -G'
