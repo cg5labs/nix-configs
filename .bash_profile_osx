@@ -63,3 +63,4 @@ export VAGRANT_DEFAULT_PROVIDER="virtualbox"
 
 # aliases
 alias ll='ls -la -G'
+alias sf='shfmt -i 2 -s -w'
