@@ -1,3 +1,4 @@
 # ignore everything below
 .git
 *.swp
+venv

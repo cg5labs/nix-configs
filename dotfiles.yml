@@ -1,0 +1,33 @@
+---
+# data structure for dotfiles
+# file_location: 'default' is for dotfiles directly in $HOME
+
+- file_path: ".config/yamllint"
+  file_src: "yamllint"
+  file_tgt: "config"
+
+- file_path: "default"
+  file_src: ".vimrc"
+
+- file_path: "default"
+  file_src: ".tmux.conf"
+
+- file_path: "default"
+  file_src: ".xmodmap"
+  file_platform: "linux"
+
+- file_path: "default"
+  file_src: ".bash_profile"
+  file_platform: "linux"
+
+- file_path: "default"
+  file_src: ".bash_profile_osx"
+  file_platform: "darwin"
+
+# test configs
+- file_path: ".custom/yamllint"
+  file_src: "config_custom"
+  file_tgt: "custom"
+
+- file_path: "default"
+  file_src: ".default.conf"

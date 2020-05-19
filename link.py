@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 """
+!!! OBSOLETE -- USE manage_dotfiles.sh INSTEAD !!!
+
 This script links dotfiles from CVS to their system locations
 """
 
