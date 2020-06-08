@@ -57,6 +57,9 @@ if which rbenv > /dev/null; then
   fi
 fi
 
+# ruby-build should use Homebrew OpenSSL
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export VAGRANT_DEFAULT_PROVIDER="virtualbox"
