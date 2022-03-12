@@ -24,6 +24,9 @@
   file_src: ".bash_profile_osx"
   file_platform: "darwin"
 
+- file_path: "default"
+  file_src: ".pylintrc"
+
 # test configs
 - file_path: ".custom/yamllint"
   file_src: "config_custom"
