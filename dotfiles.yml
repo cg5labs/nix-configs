@@ -25,6 +25,10 @@
   file_platform: "darwin"
 
 - file_path: "default"
+  file_src: ".zshrc"
+  file_platform: "darwin"
+
+- file_path: "default"
   file_src: ".pylintrc"
 
 # test configs

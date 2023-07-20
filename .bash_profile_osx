@@ -60,6 +60,13 @@ fi
 # ruby-build should use Homebrew OpenSSL
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
+# groovy 
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+# github
+export GITHUB_USER=cg5labs
+export GITHUB_TOKEN="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"
+
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
 export VAGRANT_DEFAULT_PROVIDER="virtualbox"
