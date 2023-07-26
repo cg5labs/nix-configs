@@ -104,3 +104,4 @@ alias k=kubecolor
 
 alias java-17="export JAVA_HOME=`/usr/libexec/java_home -v 17`; java -version"
 alias java-20="export JAVA_HOME=`/usr/libexec/java_home -v 20`; java -version"
+alias java-8="export JAVA_HOME=`/usr/libexec/java_home -v 1.8`; java -version"

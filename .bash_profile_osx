@@ -65,7 +65,6 @@ export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 # github
 export GITHUB_USER=cg5labs
-export GITHUB_TOKEN="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"
 
 # shell environment
 export LSCOLORS="gxBxhxDxfxhxhxhxhxcxcx"
